@@ -1,0 +1,28 @@
+
+.button{
+    display: flex;
+    width: fit-content;
+    padding: 10px 20px;
+    border: 1px solid $primary;
+    border-radius: 10px;
+    transition-duration: $animationtime;
+    background-color: $transparent;
+
+    span{
+        border: none;
+        background-color: $transparent;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: $primary;
+    }
+
+    &:hover{
+        background-color: $primary;
+        transform: scale(1.1);
+
+        span{
+            color: $secundary;
+        }
+    }
+}

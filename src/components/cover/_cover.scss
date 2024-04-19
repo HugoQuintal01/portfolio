@@ -1,0 +1,52 @@
+.cover-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    min-height: 65vh;
+
+    .cover-left{
+        padding: 0;
+        position: relative;
+
+        .cover-title{
+            display: flex;
+            flex-wrap: wrap;
+            
+            span{
+                font-size: 6em;
+                font-weight: 300;
+                width: 100%;
+                line-height: 1.2em;
+            }
+
+            p{
+                margin-top: 20px;
+                font-size: 2em;
+                line-height: 1.2em;
+                font-weight: 300;
+            }
+        }
+
+        .button{
+            margin-top: 40px;
+            margin-left: 15px;
+        }
+    }
+
+    .cover-right{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        div{
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            svg{
+                width: 80% !important;
+            }
+        }
+        
+    }
+}

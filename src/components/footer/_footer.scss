@@ -1,0 +1,57 @@
+.footer{
+    position: relative;
+    padding: 50px 0;
+    border-top: 1px solid $primary;
+    display: flex;
+    justify-content: center;
+
+    .footer-container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        p{
+            width: 100%;
+            font-size: 1em;
+            font-weight: 300;
+            text-align: center;
+
+            span{
+                font-weight: 400;
+            }
+        }
+
+        .social-media{
+            display: flex;
+            width: 100%;
+            margin-top: 20px;
+            justify-content: center;
+
+            a{
+                position: relative;
+                margin: 0 20px;
+                display: flex;
+                justify-content: center;
+
+                &::after{
+                    content: '';
+                    width: 0;
+                    height: 1px;
+                    position: absolute;
+                    bottom: -5px;
+                    background-color: $primary;
+                    transition-duration: $animationtime;
+                }
+
+                &:hover{
+
+                    &::after{
+                        width: 120%;
+                    }
+                }
+            }
+        }
+    }
+}

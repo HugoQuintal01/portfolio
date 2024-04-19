@@ -1,0 +1,29 @@
+@import './style/reset';
+@import './style/variables';
+@import './style/grid';
+@import './style/fonts';
+@import './style/responsive';
+
+// Components
+@import './components/button/button';
+@import './components/menu/menu';
+@import './components/cover/cover';
+@import './components/about/about';
+@import './components/steps/steps';
+@import './components/work/work';
+@import './components/carousel/carouselProjects';
+@import './components/tools/tools';
+@import './components/contact/contact';
+@import './components/footer/footer';
+
+// HTML, Body Style
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    padding: 0 20px;
+    background-color: $secundary;
+    overflow-x: hidden;
+}

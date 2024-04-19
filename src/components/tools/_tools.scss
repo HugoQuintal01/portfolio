@@ -1,0 +1,59 @@
+.tools-section{
+    position: relative;
+    padding: 50px 0;
+
+    .tools-title{
+        padding: 50px 0;
+        border-top: 1px solid $primary;
+        border-bottom: 1px solid $primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span{
+            text-align: center;
+            font-size: 3em;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+    }
+}
+
+// Carousel Items
+body{
+
+
+    .slick-slider{
+        padding: 50px 0;
+        border-top: 1px solid $primary;
+        background-color: $primary;
+        margin-left: -50px;
+        margin-right: -50px;
+
+        .slick-list{
+
+            .carousel-card{
+                display: flex !important;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: center;
+
+                img{
+                    max-height: 100px;
+                }
+        
+                span{
+                    margin-top: 10px;
+                    text-align: center;
+                    width: 100%;
+                    font-size: 1.2em;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    color: $secundary;
+                }
+            }
+        }
+    
+        
+    }
+}

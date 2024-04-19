@@ -1,0 +1,26 @@
+$titlesfont: "Lato";
+$titlesfontweights: "300;400;500;600;700;800;900";
+$bodyfont: "Lato";
+$bodyfontweights: "400";
+
+$primary: #0D0D0D;
+$secundary: #F2F2F2;
+$third: #A6A6A6;
+$forth: #8C8C8C;
+$fifth: #404040;
+$primary50: #0D0D0D50;
+$primary20: #0D0D0D20;
+$transparent: #00000000;
+
+$animationtime: 0.3s;
+
+$tablet: 750px;
+$desktop: 1200px;
+
+$gridcolumns: 12;
+$gridgutter: 30px;
+
+$gridwidth: 100%;
+$gridwidtht: 90%;
+$gridwidthd: $desktop - $gridgutter;
+

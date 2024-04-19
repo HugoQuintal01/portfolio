@@ -1,0 +1,107 @@
+.work-section{
+    position: relative;
+    padding: 100px 0;
+    border-top: 1px solid $primary;
+
+    .work-container{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .work-left{
+            border-right: 1px solid $primary;
+            padding-right: 50px;
+            
+            h3{
+                font-size: 3em;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            p{
+                font-size: 1.2em;
+                font-weight: 300;
+                margin-top: 20px;
+                line-height: 1.2em;
+            }
+
+            .button{
+                margin-top: 60px;
+            }
+        }
+
+        .work-right{
+            padding-left: 50px;
+            position: relative;
+            max-height: 800px;
+            overflow-y: scroll;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            cursor: ns-resize;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .work-item{
+                margin: 20px 0;
+                transition-duration: $animationtime;
+                border-bottom: 1px solid $primary;
+                padding: 20px 0;
+
+                &:last-child{
+                    border-bottom: none;
+                }
+
+                .work-item-main{
+                    display: flex;
+                    align-items: center;
+                    transition-duration: $animationtime;
+
+                    &:last-child{
+                        margin-top: -5px;
+
+                        img{
+                            opacity: 0;
+                        }
+                    }
+
+                    img{
+                        width: 30px;
+                        height: 30px;
+                        -webkit-filter: invert(100%); /* Safari/Chrome */
+                        filter: invert(100%);
+                        transform: rotate(270deg);
+                    }
+
+                    a{
+                        margin-left: 10px;
+                        font-size: 1.6em;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        cursor: zoom-in;
+                    }
+
+                    span{
+                        margin-left: 10px;
+                        font-size: 0.8em;
+                        font-weight: 300;
+                    }
+                }
+
+                &:hover{
+
+                    .work-item-main{
+                        margin-left: 10px;
+                    }
+                    
+
+                    a{
+                        font-weight: 400;
+                    }
+                }
+            }            
+        }
+    }
+}

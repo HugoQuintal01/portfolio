@@ -1,0 +1,20 @@
+// Carousel Items
+.slick-slider{
+    padding: 50px 0;
+    border-top: 1px solid $primary;
+    background-color: $primary;
+    margin-left: -50px;
+    margin-right: -50px;
+
+    .carousel-card-projects{
+        display: flex !important;
+        justify-content: center;
+
+        span{
+            font-size: 2.4em;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: $secundary;
+        }
+    }
+}

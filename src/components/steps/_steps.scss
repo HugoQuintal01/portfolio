@@ -1,0 +1,56 @@
+.steps-section{
+
+    .steps-container{
+      padding: 100px 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      position: relative;
+
+      .steps{
+        margin: 30px 0;
+        padding: 20px 50px;
+        border-left: 1px solid $primary;
+
+        .titleStep{
+            
+            h4{
+                font-size: 2em;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+        }
+
+        .textStep{
+            margin-top: 10px;
+            font-size: 1.2em;
+            font-weight: 300;
+            line-height: 1.2em;
+        }
+      }
+
+      .last-step-button{
+        border-left: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 230px;
+      }
+    }
+
+    .steps-title{
+      padding: 50px 0;
+      border-top: 1px solid $primary;
+      border-bottom: 1px solid $primary;
+      display: flex;
+      justify-content: center;
+
+      h3{
+        font-size: 3em;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+    }
+}
