@@ -39,3 +39,7 @@ html, body {
 .cursor {
   pointer-events: none;
 }
+
+a:hover .cursor {
+  transform: translateX(-50%) translateY(-50%) scale(1.2);
+}
