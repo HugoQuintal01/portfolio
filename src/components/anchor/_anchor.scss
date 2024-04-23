@@ -1,0 +1,28 @@
+.anchor-top{
+    width: 50px;
+    height: 50px;
+    background-color: $primary;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    border-radius: 100%;
+    padding: 10px;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: $animationtime;
+    z-index: 11;
+    mix-blend-mode: difference!important;
+
+    span{
+        font-size: 1em;
+        text-transform: uppercase;
+        color: $secundary;
+        text-align: center;
+    }
+
+    &:hover{
+        transform: scale(1.4);
+    }
+}

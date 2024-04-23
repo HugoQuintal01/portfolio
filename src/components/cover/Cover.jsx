@@ -4,6 +4,7 @@ import Lottie from "lottie-react";
 import LottieAnimation from '../../assets/images/lottie-animation.json';
 
 const Cover = () => {
+
     return(
         <section className="cover-section gridrowfull">
             <div className="cover-left col-d-6 col-t-12 col-12">

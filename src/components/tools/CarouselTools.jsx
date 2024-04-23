@@ -15,7 +15,7 @@ import Slider from 'react-slick';
 
 const CarouselTools = () => {
     const settings = {
-        slidesToShow: 10,
+        slidesToShow: 6,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 0,

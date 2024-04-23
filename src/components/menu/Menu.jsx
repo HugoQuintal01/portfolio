@@ -1,8 +1,8 @@
-import Button from "../button/Button";
+import React from "react";
 
 const Menu = () => {
     return (
-        <section className="menu gridrowfull">
+        <section id="menu" className="menu gridrowfull">
             <div className="website-name col-d-4 col-6 col-t-6">
                 <a href="/">Hugo Quintal</a>
             </div>

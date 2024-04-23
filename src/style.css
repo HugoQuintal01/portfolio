@@ -907,6 +907,16 @@ p, li, div, span, a {
   font-weight: 400;
 }
 
+/* Steps.css */
+.steps {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.steps.visible {
+  opacity: 1;
+}
+
 .work-section {
   position: relative;
   padding: 100px 0;
@@ -1199,6 +1209,73 @@ body .slick-slider .slick-list .carousel-card span {
 }
 .footer .footer-container .social-media a:hover::after {
   width: 120%;
+}
+
+/* Cursor.scss */
+html, body {
+  cursor: none;
+}
+
+.color {
+  position: absolute;
+  top: calc(50vh - 30px);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  mix-blend-mode: difference !important;
+}
+
+.cursor {
+  position: fixed;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  mix-blend-mode: difference !important;
+  z-index: 111;
+}
+
+.cursor:nth-child(1) {
+  background-color: #ffffff;
+}
+
+.cursor:nth-child(2) {
+  background-color: #fefefe;
+  width: 22px;
+  height: 22px;
+  transition: width 400ms ease, height 400ms ease;
+}
+
+.cursor {
+  pointer-events: none;
+}
+
+.anchor-top {
+  width: 50px;
+  height: 50px;
+  background-color: #0D0D0D;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  border-radius: 100%;
+  padding: 10px;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.3s;
+  z-index: 11;
+  mix-blend-mode: difference !important;
+}
+.anchor-top span {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #F2F2F2;
+  text-align: center;
+}
+.anchor-top:hover {
+  transform: scale(1.4);
 }
 
 html {
