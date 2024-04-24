@@ -20,6 +20,13 @@
         text-transform: uppercase;
         color: $secundary;
         text-align: center;
+        display: none;
+    }
+
+    img{
+        width: 40px;
+        height: 40px;
+        transform: rotate(180deg);
     }
 
     &:hover{

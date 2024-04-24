@@ -28,6 +28,12 @@
 
             .button{
                 margin-top: 60px;
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+
+                &.visible{
+                    opacity: 1 !important;
+                }
             }
         }
 
@@ -49,6 +55,12 @@
                 transition-duration: $animationtime;
                 border-bottom: 1px solid $primary;
                 padding: 20px 0;
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+
+                &.visible{
+                    opacity: 1;
+                }
 
                 &:last-child{
                     border-bottom: none;
@@ -105,3 +117,17 @@
         }
     }
 }
+
+
+/* Work.css */
+.work-left h3,.work-left p{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .work-left h3.visible {
+    opacity: 1;
+  }
+  .work-left p.visible {
+    opacity: 1;
+  }

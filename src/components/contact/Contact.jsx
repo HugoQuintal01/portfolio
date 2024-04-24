@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from 'react';
 
 const Contact = () => {
     const [name, setName] = useState(""); // State to store the name
@@ -45,20 +45,41 @@ const Contact = () => {
         console.log("Form submitted!");
     };
 
+    // Animation enter
+    const stepsRef = useRef([]);
+    const [visibleSteps, setVisibleSteps] = useState([]);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const stepsVisibility = stepsRef.current.map(step => {
+                const rect = step.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                return rect.top <= windowHeight * 0.75;
+            });
+            setVisibleSteps(stepsVisibility);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // Initial check on mount
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
         <section id="scrollDown" className="contact-section gridrowfull">
             <div className="contact-container col-12">
                 <div className="contact-left col-d-8 col-t-12 col-12">
                     <div className="contact-title">
-                        <span>Want to start a project?</span>
-                        <h3>Let's Talk</h3>
+                        <span ref={ref => (stepsRef.current[3] = ref)} className={`${visibleSteps[3] ? "visible" : ""}`}>Want to start a project?</span>
+                        <h3 ref={ref => (stepsRef.current[3] = ref)} className={`${visibleSteps[3] ? "visible" : ""}`}>Let's Talk</h3>
                     </div>
                     {/* Displaying the greeting message with the dynamic name */}
-                    <span className="question-username">Question:</span>
+                    <span ref={ref => (stepsRef.current[3] = ref)} className={`question-username ${visibleSteps[3] ? "visible" : ""}`}>Question:</span>
                     <h4>Hi <span className="username-greeting">{name}</span>, how can I help you?</h4>
                 </div>
                 <div className="contact-right col-d-4 col-t-12 col-12">
-                    <form className="contact-form" onSubmit={handleSubmit}>
+                    <form ref={ref => (stepsRef.current[3] = ref)} className={`contact-form ${visibleSteps[3] ? "visible" : ""}`} onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="name">Name *</label>
                             <input

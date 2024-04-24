@@ -5,6 +5,11 @@
         max-width: 100vw;
         overflow-x: hidden;
 
+        .anchor-top{
+            right: 20px;
+            bottom: 20px;
+        }
+
         .menu .pages .page-item{
             display: none;
         }

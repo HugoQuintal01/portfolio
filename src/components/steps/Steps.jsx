@@ -25,7 +25,7 @@ const Steps = () => {
 
     return (
         <section id="work" className="steps-section gridrowfull">
-            <div className="steps-title col-12">
+            <div ref={ref => (stepsRef.current[5] = ref)} className={`steps-title col-12 ${visibleSteps[5] ? "visible" : ""}`}>
                 <h3>Let's work together?</h3>
             </div>
             <div className="steps-container">
