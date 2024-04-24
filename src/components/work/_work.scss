@@ -19,7 +19,9 @@
                 position: -webkit-sticky;
                 position: sticky;
                 top: 50px;
-                display: block;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
             }
             
             

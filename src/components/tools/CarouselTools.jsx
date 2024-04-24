@@ -34,16 +34,18 @@ const CarouselTools = () => {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
-                    initialSlide: 2 // Adjusted initial slide for better view
+                    initialSlide: 2, // Adjusted initial slide for better view
+                    speed: 1000
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    speed: 5000
                 }
             }
         ]

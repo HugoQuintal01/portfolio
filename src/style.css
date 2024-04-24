@@ -1016,7 +1016,9 @@ p, li, div, span, a {
 .work-section .work-container .work-left .work-left-sticky {
   position: sticky;
   top: 50px;
-  display: block;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .work-section .work-container .work-left h3 {
   font-size: 3em;
@@ -1268,6 +1270,7 @@ body .slick-slider .slick-list .carousel-card span {
   background-color: rgba(0, 0, 0, 0);
   border: none;
   border-bottom: 1px solid #0D0D0D;
+  border-radius: 0;
 }
 .contact-section .contact-container .contact-right .contact-form .form-group textarea {
   margin-top: 10px;
