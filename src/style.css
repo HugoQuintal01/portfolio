@@ -527,6 +527,9 @@ p, li, div, span, a {
     max-width: 100vw;
     overflow-x: hidden;
   }
+  body .cursor {
+    display: none;
+  }
   body .anchor-top {
     right: 20px;
     bottom: 20px;
@@ -641,6 +644,9 @@ p, li, div, span, a {
 }
 /* Tablet devices (portrait and landscape) */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  body .cursor {
+    display: none;
+  }
   body .menu .pages .page-item {
     display: none;
   }
