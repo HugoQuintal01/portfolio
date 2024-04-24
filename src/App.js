@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './style.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -8,7 +9,6 @@ import Cover from './components/cover/Cover';
 import Menu from './components/menu/Menu';
 import Steps from './components/steps/Steps';
 import Work from './components/work/Work';
-import './style.css';
 import CarouselTools from './components/tools/CarouselTools';
 import CarouselProjects from './components/carousel/CarouselProjects';
 import Footer from './components/footer/Footer';
