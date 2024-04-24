@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import Work from '../../assets/images/work_02.png'; // Import the image
 
 const About = () => {
     const stepsRef = useRef([]);
@@ -27,6 +28,9 @@ const About = () => {
                 <div className="about-left col-d-6 col-t-12 col-12">
                     <span ref={ref => (stepsRef.current[6] = ref)} className={`${visibleSteps[6] ? "visible" : ""}`}>My Expertise</span>
                     <h2 ref={ref => (stepsRef.current[7] = ref)} className={`${visibleSteps[7] ? "visible" : ""}`}>Spearhead the development of Websites and Web Applications</h2>
+                    <div ref={ref => (stepsRef.current[7] = ref)} className={`work-illustration col-12 ${visibleSteps[7] ? "visible" : ""}`}>
+                        <img src={Work} alt="Work illustration" />
+                    </div>
                 </div>
                 <div className="about-right col-d-6 col-t-12 col-12">
                     <p ref={ref => (stepsRef.current[0] = ref)} className={`${visibleSteps[0] ? "visible" : ""}`}>Spearhead the development of websites and web applications from inception to completion, adhering to design mockups provided in Figma or Adobe XD</p>

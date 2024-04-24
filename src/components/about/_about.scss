@@ -20,6 +20,41 @@
                 font-weight: 400;
                 text-transform: uppercase;
             }
+
+            .work-illustration img{
+              mix-blend-mode: multiply;
+            }
+
+            .work-illustration{
+              position: relative;
+              display: flex;
+              justify-content: center;
+              margin-top: 80px;
+              opacity: 0;
+              transition: opacity 0.5s ease-in-out;
+
+              img{
+                mix-blend-mode: multiply;
+                width: 100%;
+                height: auto;
+                
+              }
+
+              &.visible{
+
+                img{
+                  mix-blend-mode: multiply;
+                }
+
+                opacity: 1;
+              }
+
+              &.visible{
+                opacity: 1;
+              }
+              
+              
+            }
         }
 
         .about-right{

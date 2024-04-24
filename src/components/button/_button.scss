@@ -5,13 +5,14 @@
     padding: 10px 20px;
     border: 1px solid $primary;
     border-radius: 10px;
-    transition-duration: $animationtime;
     background-color: $transparent;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    transition-duration: $animationtime;
 
     &.visible{
         opacity: 1;
+        transition-duration: $animationtime;
     }
 
     span{

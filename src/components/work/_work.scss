@@ -12,6 +12,16 @@
         .work-left{
             border-right: 1px solid $primary;
             padding-right: 50px;
+            position: relative;
+            display: block;
+
+            .work-left-sticky{
+                position: -webkit-sticky;
+                position: sticky;
+                top: 50px;
+                display: block;
+            }
+            
             
             h3{
                 font-size: 3em;
@@ -35,12 +45,24 @@
                     opacity: 1 !important;
                 }
             }
+
+            img{
+                margin-top: 80px;
+                width: 100%;
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+                mix-blend-mode: multiply;
+
+                &.visible{
+                    opacity: 1 !important;
+                }
+            }
         }
 
         .work-right{
             padding-left: 50px;
             position: relative;
-            max-height: 800px;
+            //max-height: 800px;
             overflow-y: scroll;
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */

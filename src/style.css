@@ -697,13 +697,14 @@ p, li, div, span, a {
   padding: 10px 20px;
   border: 1px solid #0D0D0D;
   border-radius: 10px;
-  transition-duration: 0.3s;
   background-color: rgba(0, 0, 0, 0);
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  transition-duration: 0.3s;
 }
 .button.visible {
   opacity: 1;
+  transition-duration: 0.3s;
 }
 .button span {
   border: none;
@@ -854,6 +855,31 @@ p, li, div, span, a {
   font-weight: 400;
   text-transform: uppercase;
 }
+.about-section .about-container .about-left .work-illustration img {
+  mix-blend-mode: multiply;
+}
+.about-section .about-container .about-left .work-illustration {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.about-section .about-container .about-left .work-illustration img {
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: auto;
+}
+.about-section .about-container .about-left .work-illustration.visible {
+  opacity: 1;
+}
+.about-section .about-container .about-left .work-illustration.visible img {
+  mix-blend-mode: multiply;
+}
+.about-section .about-container .about-left .work-illustration.visible {
+  opacity: 1;
+}
 .about-section .about-container .about-right {
   position: relative;
   border-left: 1px solid #0D0D0D;
@@ -977,6 +1003,13 @@ p, li, div, span, a {
 .work-section .work-container .work-left {
   border-right: 1px solid #0D0D0D;
   padding-right: 50px;
+  position: relative;
+  display: block;
+}
+.work-section .work-container .work-left .work-left-sticky {
+  position: sticky;
+  top: 50px;
+  display: block;
 }
 .work-section .work-container .work-left h3 {
   font-size: 3em;
@@ -997,10 +1030,19 @@ p, li, div, span, a {
 .work-section .work-container .work-left .button.visible {
   opacity: 1 !important;
 }
+.work-section .work-container .work-left img {
+  margin-top: 80px;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  mix-blend-mode: multiply;
+}
+.work-section .work-container .work-left img.visible {
+  opacity: 1 !important;
+}
 .work-section .work-container .work-right {
   padding-left: 50px;
   position: relative;
-  max-height: 800px;
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */

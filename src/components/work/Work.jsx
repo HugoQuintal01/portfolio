@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Button from "../button/Button";
 import ArrowIcon from '../../assets/images/arrow-down.png';
+import Work03 from '../../assets/images/work_03.png';
 
 const Work = () => {
 
@@ -10,12 +11,16 @@ const Work = () => {
     useEffect(() => {
         const handleScroll = () => {
             const stepsVisibility = stepsRef.current.map(step => {
-                const rect = step.getBoundingClientRect();
-                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-                return rect.top <= windowHeight * 1;
+                if (step) {
+                    const rect = step.getBoundingClientRect();
+                    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                    return rect.top <= windowHeight * 1;
+                }
+                return false;
             });
             setVisibleSteps(stepsVisibility);
         };
+        
 
         window.addEventListener("scroll", handleScroll);
         handleScroll(); // Initial check on mount
@@ -28,9 +33,12 @@ const Work = () => {
         <section id="portfolio" className="work-section gridrowfull">
             <div className="work-container col-d-12 col-t-12 col-12">
                 <div className="work-left col-d-4 col-t-12 col-12">
-                    <h3 ref={ref => (stepsRef.current[1] = ref)} className={`${visibleSteps[1] ? "visible" : ""}`}>Featured Work</h3>
-                    <p ref={ref => (stepsRef.current[2] = ref)} className={`${visibleSteps[2] ? "visible" : ""}`}>Explore a curated selection of websites developed in close collaboration with our talented design team. These projects showcase the synergy between design and development, resulting in engaging digital experiences that captivate audiences.</p>
-                    <Button ref={ref => (stepsRef.current[3] = ref)} className={`button ${visibleSteps[3] ? "visible" : ""}`} buttonHref={'#scrollDown'} buttonText={"Let's work"} />
+                    <div className='work-left-sticky'>
+                        <h3 ref={ref => (stepsRef.current[1] = ref)} className={`${visibleSteps[1] ? "visible" : ""}`}>Featured Work</h3>
+                        <p ref={ref => (stepsRef.current[2] = ref)} className={`${visibleSteps[2] ? "visible" : ""}`}>Explore a curated selection of websites developed in close collaboration with our talented design team. These projects showcase the synergy between design and development, resulting in engaging digital experiences that captivate audiences.</p>
+                        <Button ref={ref => (stepsRef.current[3] = ref)} className={`button ${visibleSteps[3] ? "visible" : ""}`} buttonHref={'#scrollDown'} buttonText={"Let's work"} />
+                    </div>
+                    <img ref={ref => (stepsRef.current[3] = ref)} className={`${visibleSteps[3] ? "visible" : ""}`} src={Work03} alt="Arrow Icon" />
                 </div>
                 <div className="work-right col-d-8 col-t-12 col-12">
                     <div ref={ref => (stepsRef.current[4] = ref)} className={`work-item col-12 ${visibleSteps[4] ? "visible" : ""}`}>
