@@ -1,8 +1,8 @@
+// Normal Imports
 @import './style/reset';
 @import './style/variables';
 @import './style/grid';
 @import './style/fonts';
-@import './style/responsive';
 
 // Components
 @import './components/button/button';
@@ -17,6 +17,9 @@
 @import './components/footer/footer';
 @import './components/cursor/cursor';
 @import './components/anchor/anchor';
+
+// Components
+@import './style/responsive';
 
 // HTML, Body Style
 html{
