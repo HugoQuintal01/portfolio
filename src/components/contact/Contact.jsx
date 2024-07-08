@@ -69,7 +69,7 @@ const Contact = () => {
     return (
         <section id="scrollDown" className="contact-section gridrowfull">
             <div className="contact-container col-12">
-                <div className="contact-left col-d-8 col-t-12 col-12">
+                <div className="contact-left col-d-7 col-t-12 col-12">
                     <div className="contact-title">
                         <span ref={ref => (stepsRef.current[3] = ref)} className={`${visibleSteps[3] ? "visible" : ""}`}>Want to start a project?</span>
                         <h3 ref={ref => (stepsRef.current[3] = ref)} className={`${visibleSteps[3] ? "visible" : ""}`}>Let's Talk</h3>
@@ -78,7 +78,7 @@ const Contact = () => {
                     <span ref={ref => (stepsRef.current[3] = ref)} className={`question-username ${visibleSteps[3] ? "visible" : ""}`}>Question:</span>
                     <h4>Hi <span className="username-greeting">{name}</span>, how can I help you?</h4>
                 </div>
-                <div className="contact-right col-d-4 col-t-12 col-12">
+                <div className="contact-right col-d-5 col-t-12 col-12">
                     <form ref={ref => (stepsRef.current[3] = ref)} className={`contact-form ${visibleSteps[3] ? "visible" : ""}`} onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="name">Name *</label>
